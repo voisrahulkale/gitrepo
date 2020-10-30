@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'echo "something"'
+        sh 'mvn -f gitrepo/javademos-master/ssgsems/pom.xml -B -DskipTests clean package'
       }
     }
 
