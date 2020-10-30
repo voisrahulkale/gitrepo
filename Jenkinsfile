@@ -7,7 +7,7 @@ pipeline {
         archiveArtifacts(artifacts: '**/target/*.war', fingerprint: true)
         sh '''mkdir  /home/voisrahul/buildoutput/${BUILD_NUMBER}
 
-cp **/target/*.war /home/voisrahul/buildoutput/${BUILD_NUMBER}'''
+cp /var/lib/jenkins/workspace/gitrepo_master/javademos-master/ssgsems/target/*.war /home/voisrahul/buildoutput/${BUILD_NUMBER}'''
       }
     }
 
